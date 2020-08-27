@@ -1,0 +1,31 @@
+{
+  "name": "cyper-omg",
+  "version": "1.0.0",
+  "description": "Cypher OGM OMG!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/general-galactic/cyper-omg.git"
+  },
+  "keywords": [
+    "neo4j",
+    "cypher",
+    "omg",
+    "ogm",
+    "graphdb",
+    "graph"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/general-galactic/cyper-omg/issues"
+  },
+  "homepage": "https://github.com/general-galactic/cyper-omg#readme",
+  "dependencies": {
+    "joi": "^17.2.1",
+    "neo4j-driver": "^4.1.1"
+  }
+}
