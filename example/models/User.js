@@ -1,6 +1,6 @@
-const CyperOMGModel = require('../../src/CyperOMGModel');
+const CypherOMGModel = require('../../src/CypherOMGModel');
 
-module.exports = class User extends CyperOMGModel {
+class User extends CypherOMGModel {
 
     define( Joi ){
         return {
@@ -9,4 +9,10 @@ module.exports = class User extends CyperOMGModel {
         }
     }
 
+    static findByName( name ){
+        return this.run(`MATCH(n:${this.label} { name: $name }) RETURN n`, { name })
+    }
+
 }
+
+module.exports = User

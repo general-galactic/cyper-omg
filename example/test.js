@@ -10,9 +10,11 @@
     const { User } = cypherOMG.models
 
     //const result = await cypherOMG.run(`CREATE (n:User { name: 'Andy', title: 'Developer' })`)
-    const { records: [user] } = await User.findAll()
-    console.log('FUCK YEA', user.name, user )
+    //const { records: [user] } = await User.findAll()
+    //console.log('FUCK YEA', user.name, user )
 
-    user.name = 'shit'
-    console.log('DOUBLE FUCK YEA', user.changes, user.name )
+    //user.name = 'shit'
+    //console.log('DOUBLE FUCK YEA', user.changes, user.name )
+    const user = await User.findByName('Andy')
+    console.log( user )
 })()

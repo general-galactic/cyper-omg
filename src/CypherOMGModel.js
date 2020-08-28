@@ -37,6 +37,10 @@ class CyperOMGModel {
         return this.changes.length > 0
     }
 
+    define( Joi ){
+        throw new Error(`Subclasses of CypherOMGModel must implement the 'define( Joi ){}' function and return a schema.`)
+    }
+
     defineProperties(){
         for( const propertyName in this.schema ){
             this.defineProperty( propertyName )
